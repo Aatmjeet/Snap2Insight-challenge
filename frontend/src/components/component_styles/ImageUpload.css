@@ -1,0 +1,10 @@
+.imageUpload{
+	margin-top: 80px;
+	gap: 15px;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	align-items: center;
+	flex-direction: column;
+}
+

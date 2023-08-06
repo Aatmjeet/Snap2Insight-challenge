@@ -1,0 +1,17 @@
+.navbar{
+	margin-top: 20px;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+}
+
+.navbar-item{
+	font-size: 14px;
+	color: #FFF;
+	text-decoration: none;
+}
+
+.justify-center{
+	display: flex;
+	justify-content: center;
+}
