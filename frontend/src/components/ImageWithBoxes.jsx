@@ -35,7 +35,7 @@ const ImageWithBoxes = ({ imageData, selectedBrand, setSelectedBrand }) => {
       {imageLoaded && (
         <>
           {imageData.contentInformation.map((el, index) => (
-            <Tooltip title={el.brandName} placement="top">
+            <Tooltip title={el.productName} placement="top">
               <div
                 onClick={() => setSelectedBrand(el.brandName)}
                 key={index}

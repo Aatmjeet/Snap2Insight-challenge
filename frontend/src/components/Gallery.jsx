@@ -72,18 +72,25 @@ const Gallery = () => {
 
   return (
     <div className="Gallery">
+
       <div style={{ fontSize: 24, fontWeight: 500, marginTop: 20 }}>
         {!!selectedImage ? "Expanded image" : "Gallery"}
       </div>
+
+
+		{/* Button to come back to gallery masonry component */}
       {!!selectedImage && (
         <Button variant="contained" onClick={clearSelectedImage}>
           <ArrowBack /> Go back to Gallery
         </Button>
       )}
 
+		{/* Donut graph component showing all the brand products */}
       {!!selectedImage && (
         <BarShareDonutGraph products={selectedImage.contentInformation} />
       )}
+
+		{/* Bar graph component showing shelf level analysis for a selected brand */}
       {!!selectedImage && !!selectedBrand && (
         <ShelfAnalysisGraph
           selectedBrand={selectedBrand}
@@ -91,12 +98,18 @@ const Gallery = () => {
         />
       )}
 
+		{/* Message when we have no images */}
       {!!!images.length && (
         <div style={{ fontSize: 16 }}>
           No images uploaded, start by uploading <Link to={"/"}>images</Link>
         </div>
       )}
 
+
+		{/*
+			We are using selectedImage as a state to conditionally select between
+		 	our gallery Masonry component and image details component.
+		 */}
       {!!selectedImage ? (
         <ImageWithBoxes
           imageData={selectedImage}
